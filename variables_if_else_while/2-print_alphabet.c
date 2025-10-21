@@ -9,12 +9,12 @@
  */
 int main(void)
 {
-    char c = 'a';
+	char c = 'a';
 
-    while (c <= 'z')
-        putchar(c++);  /* Première utilisation de putchar pour afficher les lettres */
+	while (c <= 'z')
+		putchar(c++); /* Première utilisation de putchar */
 
-    putchar('\n');     /* Deuxième utilisation pour le saut de ligne */
+	putchar('\n'); /* Deuxième utilisation pour le saut de ligne */
 
-    return (0);
+	return (0);
 }
