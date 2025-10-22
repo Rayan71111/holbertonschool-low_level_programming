@@ -1,20 +1,21 @@
 #include "main.h"
 
 /**
- * main - Point d’entrée du programme
+ * main - affiche _putchar suivi d'un saut de ligne
  *
- * Return: Toujours 0
+ * Return: toujours 0
  */
 int main(void)
 {
-    _putchar('_');
-    _putchar('p');
-    _putchar('u');
-    _putchar('t');
-    _putchar('c');
-    _putchar('h');
-    _putchar('a');
-    _putchar('r');
-    _putchar('\n');
-    return (0);
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+
+	return (0);
 }
