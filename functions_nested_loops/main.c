@@ -1,8 +1,22 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
+#include <stdio.h>
 
-int _putchar(char c);
-void print_alphabet(void);
-void print_alphabet_x10(void); /* <-- Ajouté */
+/**
+ * main - test de la fonction _abs
+ *
+ * Retour: toujours 0
+ */
+int main(void)
+{
+    int r;
 
-#endif /* MAIN_H */
+    r = _abs(-1);
+    printf("%d\n", r);
+    r = _abs(0);
+    printf("%d\n", r);
+    r = _abs(1);
+    printf("%d\n", r);
+    r = _abs(-98);
+    printf("%d\n", r);
+    return (0);
+}
