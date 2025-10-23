@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * _abs - calcule la valeur absolue d’un entier
@@ -11,16 +11,3 @@ int _abs(int n)
     if (n < 0)
         return -n;
     return n;
-}
-
-/* Exemple d’utilisation */
-int main(void)
-{
-    int a = -42;
-    int b = 7;
-
-    printf("Valeur absolue de %d = %d\n", a, _abs(a));
-    printf("Valeur absolue de %d = %d\n", b, _abs(b));
-
-    return 0;
-}
