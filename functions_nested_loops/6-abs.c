@@ -4,12 +4,16 @@
  * _abs - calcule la valeur absolue d’un entier
  * @n: l’entier dont on veut la valeur absolue
  *
- * Retour: la valeur absolue de n
+ * Return: la valeur absolue de n
  */
 int _abs(int n)
 {
-    if (n < 0)
-        return (-n);
-    else
-        return (n);
+	if (n < 0)
+	{
+		return (-n);
+	}
+	else
+	{
+		return (n);
+	}
 }
