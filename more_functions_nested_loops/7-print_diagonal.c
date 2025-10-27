@@ -1,26 +1,25 @@
 #include "main.h"
 
 /**
- * print_line - dessine une ligne diagonale 
- * @n: nombre de fois que le caractère '_' doit être affiché
- *
- * Return: rien (void)
+ * print_diagonal - draws a diagonal line on the terminal
+ * @n: number of times the '\' character should be printed
  */
-
 void print_diagonal(int n)
 {
-	int i;
+    int i, j;
 
-	if (n <= 0)
-	{
-		_putchar('\n'); /* juste un retour à la ligne si n <= 0 */
-		return;
-	}
+    if (n <= 0)
+    {
+        _putchar('\n');
+        return;
+    }
 
-	for (i = 0; i < n; i++)
-	{
-		_putchar('_');
-	}
-
-	_putchar('\n'); /* saut de ligne à la fin */
+    for (i = 0; i < n; i++)
+    {
+        /* print spaces before the backslash */
+        for (j = 0; j < i; j++)
+            _putchar(' ');
+        _putchar('\\');
+        _putchar('\n');
+    }
 }
