@@ -1,22 +1,26 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
- * _puts - affiche une chaîne de caractères suivie d'un retour à la ligne
+ * print_rev - affiche une chaîne de caractères à l'envers
+ * @s: chaîne à afficher
  */
-void print_rev(char *s);
+void print_rev(char *s)
 {
 	int i = 0;
 
-	/* On trouve d'abord la longueur de la chaîne */
+	if (!s)
+		return;
+
 	while (s[i] != '\0')
 		i++;
 
-	/* On affiche les caractères en partant de la fin */
-	while (i > 0)
-	{
-		i--;
-		_putchar(s[i]);
-	}
+	i--; /* passer au dernier caractère réel */
 
-	_putchar('\n');
+	while (i >= 0)
+	{
+		write(1, &s[i], 1);
+		i--;
+	}
+	write(1, "\n", 1);
 }
