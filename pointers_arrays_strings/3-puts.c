@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _puts - affiche une chaine de charactere,et revien a la ligne
- * @str: chaines de charactere a afficher 
+ * _puts - affiche une chaîne de caractères suivie d'un retour à la ligne
+ * @str: chaîne de caractères à afficher
  *
- * return : rien 
+ * Return: rien
  */
-void _puts(char *str);
+void _puts(char *str)
 {
 	int i = 0;
 
