@@ -15,7 +15,7 @@ void puts2(char *str)
 		return;
 
 	for (i = 0; str[i] != '\0'; i += 2)
-		write(1, &str[i], 1);  /* affiche un caractère sur deux */
+		write(1, &str[i], 1); /* affiche un caractère sur deux */
 
-	write(1, "\n", 1);          /* saut de ligne final */
+	write(1, "\n", 1);         /* saut de ligne final */
 }
