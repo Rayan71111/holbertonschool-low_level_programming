@@ -1,25 +1,25 @@
-#include <unistd.h>
 #include "main.h"
 
-/** rev_string veut dire inverser une chaine 
- * @s: chaîne à afficher
+/**
+ * rev_string - reverses a string in place
+ * @s: pointer to the string to reverse
+ *
+ * Return: nothing
  */
-void rev_string(char *s);
+void rev_string(char *s)
 {
-	int i = 0;
+    int i = 0, j;
+    char temp;
 
-	if (!s)
-		return;
+    /* Find the length of the string */
+    while (s[i] != '\0')
+        i++;
 
-	while (s[i] != '\0')
-		i++;
-
-	i--; /* passer au dernier caractère réel */
-
-	while (i >= 0)
-	{
-		write(1, &s[i], 1);
-		i--;
-	}
-	write(1, "\n", 1);
+    /* Swap characters from both ends */
+    for (j = 0; j < i / 2; j++)
+    {
+        temp = s[j];
+        s[j] = s[i - j - 1];
+        s[i - j - 1] = temp;
+    }
 }
