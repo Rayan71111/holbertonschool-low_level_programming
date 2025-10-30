@@ -9,15 +9,15 @@
  */
 void puts2(char *str)
 {
-	char *ptr = str;
+	int i = 0;
 
 	if (!str)
 		return;
 
-	while (*ptr)
+	while (str[i] != '\0')
 	{
-		write(1, ptr, 1);  /* affiche le caractère courant */
-		ptr += 2;           /* passer un caractère sur deux */
+		write(1, &str[i], 1); /* afficher le caractère courant */
+		i += 2;               /* passer un caractère sur deux */
 	}
-	write(1, "\n", 1);     /* saut de ligne final */
+	write(1, "\n", 1);        /* saut de ligne final */
 }
