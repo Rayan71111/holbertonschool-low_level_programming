@@ -11,10 +11,14 @@ void puts2(char *str)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	if (!str)
+		return;
+
+	while (str[i])
 	{
-		write(1, &str[i], 1); /* affiche le caractère courant */
+		write(1, &str[i], 1); /* afficher un caractère */
 		i += 2;               /* passer un caractère sur deux */
 	}
-	write(1, "\n", 1);        /* affichage du saut de ligne */
+	write(1, "\n", 1);        /* saut de ligne à la fin */
 }
+
