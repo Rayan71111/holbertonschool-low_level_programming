@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * puts2 - affiche un caractère sur deux d'une chaîne
@@ -13,8 +13,8 @@ void puts2(char *str)
 
 	while (str[i] != '\0')
 	{
-		printf("%c", str[i]); /* afficher le caractère */
+		write(1, &str[i], 1); /* affiche le caractère courant */
 		i += 2;               /* passer un caractère sur deux */
 	}
-	printf("\n");             /* affichage du saut de ligne final */
+	write(1, "\n", 1);        /* affichage du saut de ligne */
 }
