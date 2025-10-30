@@ -16,8 +16,8 @@ void puts2(char *str)
 
 	while (str[i] != '\0')
 	{
-		write(1, &str[i], 1); /* afficher le caractère courant */
+		write(1, &str[i], 1); /* écrire le caractère courant */
 		i += 2;               /* passer un caractère sur deux */
 	}
-	write(1, "\n", 1);        /* saut de ligne final */
+	write(1, "\n", 1);        /* saut de ligne */
 }
