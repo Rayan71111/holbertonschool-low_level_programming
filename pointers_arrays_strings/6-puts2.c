@@ -13,8 +13,9 @@ void puts2(char *str)
 
 	while (str[i] != '\0')
 	{
-		printf("%c", str[i]); /* remplacer putchar par printf */
-		i += 2;
+		printf("%c", str[i]); /* afficher un caractère */
+		i += 2;               /* passer un caractère sur deux */
 	}
-	printf("\n");
+	printf("\n");             /* saut de ligne après la chaîne */
 }
+
